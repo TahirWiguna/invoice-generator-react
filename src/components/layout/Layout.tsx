@@ -22,8 +22,8 @@ const menu = [
         title: "Master",
         items: [
             {
-                title: "Product",
-                url: "/admin/master/product",
+                title: "Item",
+                url: "/admin/master/item",
             },
             {
                 title: "Client",

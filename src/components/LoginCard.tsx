@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { redirect } from "react-router-dom";
 import { loginUser, selectUser, logoutUser } from "@/store/user/user.slice";
 
 import { LoginCredentials } from "@/types/user";
@@ -29,7 +30,7 @@ export function LoginCard() {
     const login = async () => {
         try {
             await dispatch(loginUser(formFields)).unwrap();
-            console.log("Login successful");
+            window.location.href = "/admin/dashboard";
         } catch (error) {
             console.log("Login failed", error);
         }

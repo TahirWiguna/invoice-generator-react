@@ -62,6 +62,12 @@ const Header = (props: ComponentProps) => {
                             >
                                 GitHub
                             </a>
+                            <a
+                                className="hidden text-foreground/60 transition-colors hover:text-foreground/80 lg:block"
+                                href="/login"
+                            >
+                                Login
+                            </a>
                         </nav>
                     </div>
                     <SheetTrigger asChild>

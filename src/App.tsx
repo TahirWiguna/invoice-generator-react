@@ -8,6 +8,8 @@ import Dashboard from "./components/Dashboard";
 import PaymentMethod from "./pages/PaymentMethod";
 import ProtectedRoute, { ProtectedRouteProps } from "./components/ProtectedRoute";
 import Client from "./pages/Client";
+import Item from "./pages/Item";
+import Generate from "./components/Generate";
 
 function App() {
     const { isAuthenticated } = useAuth();
@@ -23,6 +25,7 @@ function App() {
             <Route path="*" element={<h1>PAGE NOT FOUND</h1>} />
             <Route path="/login" element={<Login />} />
             <Route path="/admin">
+                <Route path="generate" element={<Layout mainComponent={<Generate />} />} />
                 {/* <Route
                     path="dashboard"
                     element={
@@ -36,6 +39,7 @@ function App() {
                 <Route path="master">
                     <Route path="payment_method" element={<Layout mainComponent={<PaymentMethod />} />} />
                     <Route path="client" element={<Layout mainComponent={<Client />} />} />
+                    <Route path="item" element={<Layout mainComponent={<Item />} />} />
                 </Route>
             </Route>
         </Routes>
